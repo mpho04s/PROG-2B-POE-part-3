@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UyVS9vhPNUw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Student\\source\\repos\\ST10488100 Mpho Lukhele\\RaceDayMVC\\RaceDayMVC\\RaceDayMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.22.1\\microsoft.visualstudio.azure.containers.tools.targets.1.22.1.nupkg.sha512"
+  ],
+  "logs": []
+}
