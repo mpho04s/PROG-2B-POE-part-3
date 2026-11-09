@@ -1,0 +1,64 @@
+﻿@model IEnumerable<RaceDayMVC.Models.EventCategory>
+
+@{
+    ViewData["Title"] = "Event Categories";
+}
+
+<h1>Event Categories</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+        Create New Category
+    </a>
+</p>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Error"]
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Category ID</th>
+            <th>Event ID</th>
+            <th>Category Name</th>
+            <th>Distance (KM)</th>
+            <th>Entry Fee</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryID</td>
+                <td>@item.EventID</td>
+                <td>@item.CategoryName</td>
+                <td>@item.DistanceKm</td>
+                <td>@item.EntryFee</td>
+                <td>
+                    <a asp-action="Edit"
+                       asp-route-id="@item.CategoryID">Edit</a> |
+
+                    <a asp-action="Details"
+                       asp-route-id="@item.CategoryID">Details</a> |
+
+                    <a asp-action="Delete"
+                       asp-route-id="@item.CategoryID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

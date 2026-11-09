@@ -1,0 +1,44 @@
+﻿@model RaceDayMVC.Models.EventCategory
+
+@{
+    ViewData["Title"] = "Delete Event Category";
+}
+
+<h1>Delete Event Category</h1>
+
+<h3>Are you sure you want to delete this category?</h3>
+
+<div>
+    <dl class="row">
+
+        <dt class="col-sm-3">Category ID</dt>
+        <dd class="col-sm-9">@Model.CategoryID</dd>
+
+        <dt class="col-sm-3">Event ID</dt>
+        <dd class="col-sm-9">@Model.EventID</dd>
+
+        <dt class="col-sm-3">Category Name</dt>
+        <dd class="col-sm-9">@Model.CategoryName</dd>
+
+        <dt class="col-sm-3">Distance (KM)</dt>
+        <dd class="col-sm-9">@Model.DistanceKm</dd>
+
+        <dt class="col-sm-3">Entry Fee</dt>
+        <dd class="col-sm-9">@Model.EntryFee</dd>
+
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="id"
+               value="@Model.CategoryID" />
+
+        <button type="submit" class="btn btn-danger">
+            Delete Category
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancel
+        </a>
+    </form>
+</div>
+

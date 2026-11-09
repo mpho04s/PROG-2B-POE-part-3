@@ -1,0 +1,34 @@
+﻿@model RaceDayMVC.Models.EventCategory
+
+@{
+    ViewData["Title"] = "Category Details";
+}
+
+<h1>Category Details</h1>
+
+<dl class="row">
+
+    <dt class="col-sm-3">Category ID</dt>
+    <dd class="col-sm-9">@Model.CategoryID</dd>
+
+    <dt class="col-sm-3">Event ID</dt>
+    <dd class="col-sm-9">@Model.EventID</dd>
+
+    <dt class="col-sm-3">Category Name</dt>
+    <dd class="col-sm-9">@Model.CategoryName</dd>
+
+    <dt class="col-sm-3">Distance (KM)</dt>
+    <dd class="col-sm-9">@Model.DistanceKm</dd>
+
+    <dt class="col-sm-3">Entry Fee</dt>
+    <dd class="col-sm-9">@Model.EntryFee</dd>
+
+</dl>
+
+<a asp-action="Edit"
+   asp-route-id="@Model.CategoryID"
+   class="btn btn-primary">Edit</a>
+
+<a asp-action="Index"
+   class="btn btn-secondary">Back to List</a>
+
